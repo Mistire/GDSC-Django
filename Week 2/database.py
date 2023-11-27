@@ -24,8 +24,11 @@ def list_students():
     print("{:<10} {:<15} {:<10} {:<10}".format(id_no, name, sex, age))
 # def update_info():
 #   name = input()
-# def delete_info(name):
-#   name = input()
+def delete_info(name):
+  if name in student_db:
+    del student_db[name]
+  else:
+    print("No such student found.")
 
 def menu():
   print("Welcome to the Student Database")
@@ -48,8 +51,9 @@ def menu():
       list_students()
     # elif choice == 4:
     #   update_info()
-    # elif choice == 5:
-    #   delete_info()
+    elif choice == 5:
+      name_delete = input("Enter the name of the Student you want to delete from the Database: ")
+      delete_info(name_delete)
     elif choice == 6:
       print("Exited program")
       break
