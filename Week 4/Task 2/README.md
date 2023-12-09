@@ -24,4 +24,4 @@
 - Move the identified and updated files to the "last_24hours" folder using different method
 - Combine the functions to achieve the main objective.
 
-- Feel free to seek clarification on any part of the task. The primary goal is to enhance your understanding of file handling, time-based operations, and module usage in Python.
+Feel free to seek clarification on any part of the task. The primary goal is to enhance your understanding of file handling, time-based operations, and module usage in Python.
