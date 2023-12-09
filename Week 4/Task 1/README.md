@@ -60,6 +60,10 @@ print("Power Operation with Modulo Result:", result_power_modulo)
 ```python
 operations = [
     (lambda x, y: x + y, (3, 4)),
-    (lambda x, y: x * y, (2, 5)),]
+    (lambda x, y: x * y, (2, 5)),
+    ]
+result_apply = apply_operations(operations)
+print("Apply Operations Result:", result_apply)
+
 
 ```
