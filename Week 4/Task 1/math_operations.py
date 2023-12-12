@@ -32,3 +32,6 @@ def power_operation(a,b,**kwargs):
 def apply_operations(operation_list):
   result = list(map(lambda op: op[0](*op[1]), operation_list))
   return result
+
+
+Updated at 2023-12-12 19:21:15
