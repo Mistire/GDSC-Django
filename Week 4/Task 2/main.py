@@ -41,22 +41,17 @@ def main():
         current_directory = os.getcwd()
         last_24hours_folder = "last_24hours"
 
-        # List all files in the current directory
         files = list_files(current_directory)
         print("All files:", files)
 
-        # Filter files modified or created in the last 24 hours
         time_threshold = timedelta(hours=24)
         recent_files = [file for file in files if is_file_recently_modified(file, time_threshold)]
         print("Recently modified or created files:", recent_files)
 
-        # Update identified files
         update_files(recent_files)
 
-        # Create "last_24hours" folder if it doesn't exist
         create_last_24hours_folder(last_24hours_folder)
-
-        # Move identified and updated files to the "last_24hours" folder
+        
         move_files_to_folder(recent_files, last_24hours_folder)
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
