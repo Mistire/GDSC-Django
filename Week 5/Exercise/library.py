@@ -34,12 +34,24 @@ class Library:
     def add_book(self, book):
         pass
 
-
     def register_user(self, user):
-
         pass
+
+    def borrowed_books(self):
+        pass
+
+    def returned_books(self):
+        pass
+
     def transaction(self):
         pass
 
 class Transaction:
-    def __init__()
+    def __init__(self, borrowed_book, returned_book):
+        pass
+    
+    def record_transaction(self):
+        pass
+
+    def generate_transaction(self):
+        pass
