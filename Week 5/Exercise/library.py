@@ -38,9 +38,10 @@ class User:
             print(f"You haven't borrowed the book '{books_title}' from the library")
 
 class Library:
-    def __init__(self, users, books):
+    def __init__(self):
         self.users = []
         self.books = []
+        self.transactions = []
     
     def add_book(self, book):
         self.books.append(book)
@@ -66,15 +67,9 @@ class Library:
     def returned_books(self, books_title):
         self.borrowed_books.remove(books_title)
 
-    def transaction(self):
-        pass
-
 class Transaction:
-    def __init__(self, borrowed_book, returned_book):
-        pass
-    
-    def record_transaction(self):
-        pass
-
-    def generate_transaction(self):
-        pass
+    def __init__(self, user, book, transaction_type):
+        self.user = user
+        self.book = book
+        self.transaction_type = transaction_type
+        
