@@ -5,26 +5,27 @@ class Book:
         self.ISBN = ISBN
         self.availability_status = True
 
-    def display_books(self):
+    def display_book_details(self):
         return f"Title: {self.title}\nAuthor: {self.author}\nISBN: {self.ISBN}"
     
     def update_status(self,status):
         self.availability_status = status
 
 class User:
-    def __init__(self,user_id,name,books_borrowed):
+    def __init__(self,user_id,user_name):
         self.user_id = user_id
-        self.name = name
+        self.name = user_name
         self.books_borrowed = []
 
     def display_user(self):
         return f"User ID: {self.user_id}, Name: {self.name}, Books Borrowed: "
     
-    def borrow_book(self):
-        pass
-
-    def return_book(self):
-        pass
+    def borrow_book(self, books_title):
+        self.books_borrowed.append(books_title)
+        return f"Books borrowed: {self.books_borrowed}"
+        
+    def return_book(self, books_title):
+        self.books_borrowed.remove(books_title)
 
 class Library:
     def __init__(self, users, books):
@@ -32,16 +33,16 @@ class Library:
         self.books = []
     
     def add_book(self, book):
-        pass
+        self.books.append(book)
 
     def register_user(self, user):
-        pass
+        self.users.append(user)
 
-    def borrowed_books(self):
-        pass
+    def borrowed_books(self, books_title):
+        self.books.append(books_title)
 
-    def returned_books(self):
-        pass
+    def returned_books(self, books_title):
+        self.borrowed_books.remove(books_title)
 
     def transaction(self):
         pass
